@@ -20,18 +20,27 @@ async function getWorkExperience() {
     }
 }
 
+function formatYear(startDatestr, endDatestr) {
+    const startYear = new Date(startDatestr).getFullYear();
+    const endYear = endDatestr ? new Date(endDatestr).getFullYear() : "Present";
+
+    return `${startYear} - ${endYear}`;
+}
+
 function displayWorkExperience(workExperienceArray) {
     const workExperienceLi = document.getElementById('work-experience-list');
 
     workExperienceLi.innerHTML = '';
 
     workExperienceArray.forEach(experience => {
+        const yearRange = formatYear(experience.start_date, experience.end_date);
+
         const listItem = document.createElement('li');
 
         listItem.innerHTML = `
             <strong>${experience.company_name}</strong> (${experience.job_title}) <br>
             <em>${experience.location}</em> <br>
-            <span>${experience.start_date} - ${experience.end_date || 'Present'}</span> <br>
+            <span>${yearRange}</span> <br>
             <p>${experience.description || 'No description available'}</p>
         `;
 
