@@ -1,4 +1,4 @@
-"use strict";
+import { showFeedback } from './utils.js'; 
 
 // Fetch work experience data 
 async function getWorkExperience() {
@@ -64,15 +64,17 @@ async function deleteWorkExperience(event) {
             method: "GET"
         });
 
-        if(response.ok) {
+        if (response.ok) {
             console.log("Successfully deleted work experience");
             getWorkExperience();
+            showFeedback("Work experience deleted successfully.", "success");
         } else {
             const errorData = await response.json();
             throw new Error(errorData.error || "Something went wrong");
         }
     } catch (error) {
         console.error("Deletion failed:", error);
+        showFeedback("Error deleting work experience. Please try again.", "error");
     }
 }
 

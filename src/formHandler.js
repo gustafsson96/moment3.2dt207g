@@ -1,4 +1,4 @@
-"use strict";
+import { showFeedback } from './utils.js'; 
 
 const form = document.getElementById("work-experience-form");
 form.addEventListener("submit", handleFormSubmit);
@@ -22,12 +22,14 @@ async function handleFormSubmit(event) {
             const result = await response.json();
             console.log("Successfully added:", result);
             resetForm();
+            showFeedback("Work experience added!", "success");
         } else {
             const errorData = await response.json();
             throw new Error(errorData.error || "Something went wrong.");
         }
     } catch (error) {
         console.error("Submission failed:", error)
+        showFeedback("Error adding work experience. Please try again.", "error");
     }
 };
 

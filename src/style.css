@@ -142,8 +142,35 @@ form textarea:focus {
     background-color: darkgreen;
 }
 
-#success-message {
+/* Feedback message container */
+#feedback-container {
+    margin-top: 1em;
+    padding: 1em;
+    margin: 1em auto;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 5px;
+    width: 50%;
+    display: none;
+}
+
+/* Success message style */
+#feedback-container.success {
+    background-color: #d4edda;
     color: green;
+    border: 1px solid #c3e6cb;
+}
+
+/* Error message style */
+#feedback-container.error {
+    background-color: #f8d7da;
+    color: red;
+    border: 1px solid #f5c6cb;
+}
+
+#feedback-container.success,
+#feedback-container.error {
+    display: block;
 }
 
 @media (max-width: 1000px) {
