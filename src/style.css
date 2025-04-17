@@ -29,6 +29,21 @@ body {
     color: #ffffff;
 }
 
+.delete-btn {
+    background-color: red;
+    color: white;
+    padding: 5px 14px;
+    margin-bottom: 1.5em;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.delete-btn:hover {
+    background-color: darkred;
+}
+
 #success-message {
     color: green;
 }
