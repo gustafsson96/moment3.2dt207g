@@ -1,4 +1,5 @@
 body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
     margin: 0;
     padding: 0;
 }
@@ -42,6 +43,62 @@ body {
 
 .delete-btn:hover {
     background-color: darkred;
+}
+
+/* Form styling */
+.form-heading {
+    text-align: center;
+}
+
+.form-container {
+    margin: 2em 0;
+}
+
+form {
+    background-color: #fff;
+    padding: 1.5em;
+    border-radius: 8px;
+    box-shadow: 0 -6px 6px rgba(0, 0, 0, 0.2), 0 6px 6px rgba(0, 0, 0, 0.2); 
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+form input,
+form textarea,
+form button {
+    width: 93%;
+    padding: 0.7em;
+    font-size: 16px;
+    margin: 0.8em 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: border 0.3s ease;
+}
+
+/* Specific styles for the textarea */
+form textarea {
+    height: 120px;
+}
+
+/* Input hover and focus styles */
+form input:focus,
+form textarea:focus {
+    border-color: blue;
+    outline: none;
+}
+
+#form-btn {
+    background-color: green;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+    width: 98%;
+}
+
+#form-btn:hover {
+    background-color: darkgreen;
 }
 
 #success-message {
