@@ -1,3 +1,4 @@
+/* Function to show feedback to the user */
 export function showFeedback(message, type) {
     const feedbackContainer = document.getElementById("feedback-container");
 

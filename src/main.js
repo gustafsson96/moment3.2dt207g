@@ -1,6 +1,6 @@
-import { showFeedback } from './utils.js'; 
+import { showFeedback } from './utils.js'; // Import showFeedback function
 
-// Fetch work experience data 
+// Function to get work experience data 
 async function getWorkExperience() {
     let url = "http://localhost:3000/work_experience";
 
@@ -20,6 +20,7 @@ async function getWorkExperience() {
     }
 }
 
+/* Function to format date to year only */
 function formatYear(startDatestr, endDatestr) {
     const startYear = new Date(startDatestr).getFullYear();
     const endYear = endDatestr ? new Date(endDatestr).getFullYear() : "Present";
@@ -27,6 +28,7 @@ function formatYear(startDatestr, endDatestr) {
     return `${startYear} - ${endYear}`;
 }
 
+/* Function to display work experiences as a list */
 function displayWorkExperience(workExperienceArray) {
     const workExperienceLi = document.getElementById('work-experience-list');
 
@@ -55,6 +57,7 @@ function displayWorkExperience(workExperienceArray) {
     });
 }
 
+/* Function to delete a work experience */
 async function deleteWorkExperience(event) {
     const workExperienceId = event.target.getAttribute("data-id");
     const url = `http://localhost:3000/delete/${workExperienceId}`;

@@ -116,7 +116,7 @@ form button {
     transition: border 0.3s ease;
 }
 
-/* Specific styles for the textarea */
+/* Specific styles for textarea */
 form textarea {
     height: 120px;
 }
@@ -142,7 +142,7 @@ form textarea:focus {
     background-color: darkgreen;
 }
 
-/* Feedback message container */
+/* Feedback message container styling */
 #feedback-container {
     margin-top: 1em;
     padding: 1em;
@@ -173,12 +173,14 @@ form textarea:focus {
     display: block;
 }
 
+/* Media query for screens smaller than 1000px */
 @media (max-width: 1000px) {
     #work-experience-list {
         max-width: 55%;
     }
 }
 
+/* Media query for screens smaller than 600px */
 @media (max-width: 600px) {
     #work-experience-list {
         margin: 0;
@@ -188,5 +190,9 @@ form textarea:focus {
     form {
         border-radius: 0;
         box-shadow: 0 -4px 4px rgba(0, 0, 0, 0.1), 0 4px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    #feedback-container {
+        width: 70%;
     }
 }

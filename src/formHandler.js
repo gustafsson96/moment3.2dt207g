@@ -1,8 +1,9 @@
-import { showFeedback } from './utils.js'; 
+import { showFeedback } from './utils.js'; // Import showFeedback function
 
 const form = document.getElementById("work-experience-form");
 form.addEventListener("submit", handleFormSubmit);
 
+/* Function to handle form submits for adding new work experience */
 async function handleFormSubmit(event) {
     event.preventDefault();
 
@@ -19,8 +20,6 @@ async function handleFormSubmit(event) {
         const response = await submitWorkExperience(workExperience);
 
         if (response.ok) {
-            const result = await response.json();
-            console.log("Successfully added:", result);
             resetForm();
             showFeedback("Work experience added!", "success");
         } else {
@@ -33,6 +32,7 @@ async function handleFormSubmit(event) {
     }
 };
 
+/* Send POST request to backend API to store new work experience */
 async function submitWorkExperience(workExperience) {
     const url = "http://localhost:3000/work_experience";
 
@@ -45,6 +45,7 @@ async function submitWorkExperience(workExperience) {
     });
 }
 
+/* Function to reset the form after form submit */
 function resetForm() {
     const form = document.getElementById("work-experience-form");
     form.reset();
