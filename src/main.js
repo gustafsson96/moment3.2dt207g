@@ -42,10 +42,38 @@ function displayWorkExperience(workExperienceArray) {
             <em>${experience.location}</em> <br>
             <span>${yearRange}</span> <br>
             <p>${experience.description || 'No description available'}</p>
+            <button class="delete-btn" data-id="${experience.id}">Delete</button>
         `;
 
         workExperienceLi.appendChild(listItem);
     });
+
+    // Add event listeners to delete buttons
+    const deleteButtons = document.querySelectorAll('.delete-btn');
+    deleteButtons.forEach(button => {
+        button.addEventListener('click', deleteWorkExperience);
+    });
+}
+
+async function deleteWorkExperience(event) {
+    const workExperienceId = event.target.getAttribute("data-id");
+    const url = `http://localhost:3000/delete/${workExperienceId}`;
+
+    try {
+        const response = await fetch(url, {
+            method: "GET"
+        });
+
+        if(response.ok) {
+            console.log("Successfully deleted work experience");
+            getWorkExperience();
+        } else {
+            const errorData = await response.json();
+            throw new Error(errorData.error || "Something went wrong");
+        }
+    } catch (error) {
+        console.error("Deletion failed:", error);
+    }
 }
 
 getWorkExperience();
