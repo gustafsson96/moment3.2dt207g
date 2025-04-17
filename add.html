@@ -7,6 +7,17 @@
     <link rel="stylesheet" href="/src/style.css">
 </head>
 <body>
+    <form id="work-experience-form">
+        <input type="text" name="company_name" placeholder="Company Name" required>
+        <input type="text" name="job_title" placeholder="Job Title" required>
+        <input type="text" name="location" placeholder="Location" required>
+        <input type="date" name="start_date" required>
+        <input type="text" name="end_date" required>
+        <textarea name="description" id="description" placeholder="Description (optional)"></textarea>
+        <button type="submit">Add Work Experience</button>
+    </form>
+
+    <div id="success-message"></div>
     <script type="module" src="/src/main.js"></script>
 </body>
 </html>
