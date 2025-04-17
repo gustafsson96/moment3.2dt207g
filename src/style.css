@@ -173,6 +173,27 @@ form textarea:focus {
     display: block;
 }
 
+/* Styling for about.html */
+.about-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.about-section {
+    margin-bottom: 2rem;
+}
+
+.about-section h2 {
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.about-section p {
+    line-height: 1.6;
+    color: #555;
+}
+
 /* Media query for screens smaller than 1000px */
 @media (max-width: 1000px) {
     #work-experience-list {

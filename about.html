@@ -17,7 +17,52 @@
             <li><a href="about.html">About</a></li>
         </ul>
     </nav>
-    <script type="module" src="/src/main.js"></script>
+    <main class="about-container">
+        <h1>Om Webbplatsen</h1>
+        <!-- About sections -->
+        <section class="about-section">
+            <h2>Syfte</h2>
+            <p>Denna webbplats utgör moment 2 för kursen "Backend-baserad webbutveckling (dt207g)" hos Mittuniversitetet,
+                Sundsvall, och är en del av Webbutvecklingsprogrammet. Syftet med uppgiften har varit att bekanta
+                sig med
+                begreppet webbtjänster, förstå hur man kan skapa och använda en REST-baserad webbtjänst där data lagras
+                i en relationsbaserad databasserver och att kunna använda Fetch API för att konsumera webbtjänsten i en
+                separat frontend-lösning.</p>
+            <p>Webbplatsen är skapad för att lagra och visa arbetslivserfarenheter. Arbetet har skett i två olika
+                projekt: ett för backend och ett för frontend. Tillsammans kommunicerar dessa projekt för att användaren ska kunna
+                visa, hantera och lagra data. Lösningen har i dagsläget inte publicerats till webben utan enbart körts lokalt på min dator.</p>
+        </section>
+
+        <section class="about-section">
+            <h2>Databasserver</h2>
+            <p> Backend-lösningen är byggd med Express och hanterar data som lagras i en MySQL-databas.
+                Funktionaliteten utgörs av API routes för att hämta, lägga till och radera arbetslivserfarenhet.
+                Input från användaren valideras i backend för att kontrollera att inga tomma textfält lagras i databasen
+                (med undantag för end_date och description där NULL är tillåtet), och passande statuskoder och
+                eventuella felmeddelanden returneras som svar från servern.
+            </p>
+            <p>Jag har använt phpMyAdmin frekvent för arbetet med databasen eftersom jag tycker det ger en bra och
+                tydlig överblick av vad man håller på med.</p>
+        </section>
+
+        <section class="about-section">
+            <h2>Slutsatser</h2>
+            <p> Denna uppgift har varit en bra introduktion till fullstacksutveckling, något som jag
+                enbart har kikat lite snabbt på tidigare men inte har någon riktig erfarenhet av. Trots att det är många
+                nya koncept och komponenter som ska fungera tillsammans har arbetet känts överkomligt, vilket i sig är
+                ett bevis på att man lärt sig väldigt mycket på kort tid. Det känns kul!</p>
+            <p>Även om grundarbetet gått mestadels bra känner jag mig fortfarande lite begränsad i hur mycket
+                funktionalitet jag kan implementera, särskilt på egen hand (utan att
+                riskera att man ställer till det med saker som faktiskt fungerar). Eftersom det som tidigare nämnt är
+                mycket nytt krävs det också väldigt mycket research, ibland för ganska små resultat. Detta är givetvis
+                en naturlig del av inlärningsprocessen men ibland är det svårt att förstå helhetsbilden,
+                särskilt i arbetet med databasservrar och hur allt hänger ihop.</p>
+            <p>Det jag främst tar med mig från denna uppgift är att det känns väldigt coolt att kunna hämta
+                data från en webbtjänst som man skapat själv. Jag förundras ofta över hur olika lösningar kan
+                kommunicera med varandra och ibland blir man nästan förvånad när allt funkar som det ska. Det är väldigt
+                motiverande i processen att lära sig ännu mer!</p>
+        </section>
+    </main>
 </body>
 
 </html>
