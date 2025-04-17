@@ -104,6 +104,10 @@ form {
     margin: 0 auto;
 }
 
+form label {
+    color: #666;
+}
+
 form input,
 form textarea,
 form button {
