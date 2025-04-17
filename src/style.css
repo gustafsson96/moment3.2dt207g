@@ -157,4 +157,9 @@ form textarea:focus {
         margin: 0;
         max-width: 85%;
     }
+
+    form {
+        border-radius: 0;
+        box-shadow: 0 -4px 4px rgba(0, 0, 0, 0.1), 0 4px 4px rgba(0, 0, 0, 0.1);
+    }
 }
