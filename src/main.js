@@ -34,6 +34,14 @@ function displayWorkExperience(workExperienceArray) {
 
     workExperienceLi.innerHTML = '';
 
+    if (workExperienceArray.length === 0) {
+        const noDataMessage = document.createElement('li');
+        noDataMessage.textContent = 'No work experience available.';
+        noDataMessage.classList.add('no-work-experience');
+        workExperienceLi.appendChild(noDataMessage);
+        return;
+    }
+
     workExperienceArray.forEach(experience => {
         const yearRange = formatYear(experience.start_date, experience.end_date);
 
