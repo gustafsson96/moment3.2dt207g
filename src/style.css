@@ -1,0 +1,34 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    list-style: none;
+    margin: 0 0 2em 0;
+    padding: 0;
+    display: flex;
+    background-color: #1e1e2f;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.navbar li a {
+    text-decoration: none;
+    color: #f0f0f0;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar li a:hover {
+    background-color: #3e3e55;
+    color: #ffffff;
+}
+
+#success-message {
+    color: green;
+}
