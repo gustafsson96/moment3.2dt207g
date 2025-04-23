@@ -7,14 +7,20 @@ form.addEventListener("submit", handleFormSubmit);
 async function handleFormSubmit(event) {
     event.preventDefault();
 
-    const workExperience = {
-        company_name: document.getElementById("company_name").value.trim(),
-        job_title: document.getElementById("job_title").value.trim(),
-        location: document.getElementById("location").value.trim(),
-        start_date: document.getElementById("start_date").value,
-        end_date: document.getElementById("end_date").value || null,
-        description: document.getElementById("description").value.trim() || null,
-    };
+        const company_name = document.getElementById("company_name").value.trim();
+        const job_title = document.getElementById("job_title").value.trim();
+        const location = document.getElementById("location").value.trim();
+        const start_date = document.getElementById("start_date").value;
+        const  end_date = document.getElementById("end_date").value || null;
+        const description = document.getElementById("description").value.trim();
+
+    // Validation
+    if (!company_name || !job_title || !location || !start_date || !description ) {
+        showFeedback("Please fill out all fields (end date is optional).", "error");
+        return;
+    }
+
+    const workExperience = { company_name, job_title, location, start_date, end_date, description};
 
     try {
         const response = await submitWorkExperience(workExperience);
