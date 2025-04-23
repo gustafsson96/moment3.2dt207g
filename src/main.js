@@ -68,11 +68,11 @@ function displayWorkExperience(workExperienceArray) {
 /* Function to delete a work experience */
 async function deleteWorkExperience(event) {
     const workExperienceId = event.target.getAttribute("data-id");
-    const url = `http://localhost:3000/delete/${workExperienceId}`;
+    const url = `http://localhost:3000/work_experience/${workExperienceId}`;
 
     try {
         const response = await fetch(url, {
-            method: "GET"
+            method: "DELETE"
         });
 
         if (response.ok) {
