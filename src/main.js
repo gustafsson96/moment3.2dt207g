@@ -2,7 +2,7 @@ import { showFeedback } from './utils.js'; // Import showFeedback function
 
 // Function to get work experience data 
 async function getWorkExperience() {
-    let url = "http://localhost:3000/work_experience";
+    let url = "https://moment3dt207g-6kaa.onrender.com/";
 
     try {
         const response = await fetch(url);
@@ -48,11 +48,10 @@ function displayWorkExperience(workExperienceArray) {
         const listItem = document.createElement('li');
 
         listItem.innerHTML = `
-            <strong>${experience.company_name}</strong> (${experience.job_title}) <br>
-            <em>${experience.location}</em> <br>
+            <strong>${experience.company}</strong> (${experience.job_title}) <br>
             <span>${yearRange}</span> <br>
             <p>${experience.description || 'No description available'}</p>
-            <button class="delete-btn" data-id="${experience.id}">Delete</button>
+            <button class="delete-btn" data-id="${experience._id}">Delete</button>
         `;
 
         workExperienceLi.appendChild(listItem);
@@ -68,7 +67,7 @@ function displayWorkExperience(workExperienceArray) {
 /* Function to delete a work experience */
 async function deleteWorkExperience(event) {
     const workExperienceId = event.target.getAttribute("data-id");
-    const url = `http://localhost:3000/work_experience/${workExperienceId}`;
+    const url = `https://moment3dt207g-6kaa.onrender.com//work_experience/${workExperienceId}`;
 
     try {
         const response = await fetch(url, {
