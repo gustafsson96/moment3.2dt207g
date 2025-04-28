@@ -3,9 +3,9 @@
 This project makes up the second part of my contribution for moment 3 in the course "Backend-baserad webbutveckling" (dt207g) at Mittuniversitetet, Sundsvall. 
 
 ## Description
-This frontend application interacts with the backend API (that makes up the first part of this assignment) to display, add and delete work experiences. The website includes a list displaying all stored work experiences, a form to add new work experiences and an about page with information about the webbsite and the MySQL database. 
+This frontend application interacts with a backend API created using MongoDB to display, add and delete work experiences. The website includes a list displaying all stored work experiences, a form to add new work experiences and an about page.
 <br><br>
-Link to the API's GitHub repository: https://github.com/gustafsson96/moment2dt207g.git
+Link to the API's GitHub repository: [Work Experience API](https://github.com/gustafsson96/moment3dt207g.git)
 
 ## Features
 * **View work experiences:** Displays a list of work experiences fetched from the backend API.
@@ -28,4 +28,4 @@ Link to the API's GitHub repository: https://github.com/gustafsson96/moment2dt20
 * Deleting a work experience triggers a GET request to delete the entry in the backend. 
 
 ## Future Improvments 
-* Implement functionality for the user to update a work experience. 
+* Implement functionality for the user to update a work experience (functionality available in the API). 
