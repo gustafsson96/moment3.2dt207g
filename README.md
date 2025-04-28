@@ -1,6 +1,6 @@
-# Moment 2 DT207G Part 2
+# Moment 3 DT207G Part 3
 
-This project makes up the second part of my contribution for moment 2 in the course "Backend-baserad webbutveckling" (dt207g) at Mittuniversitetet, Sundsvall. 
+This project makes up the second part of my contribution for moment 3 in the course "Backend-baserad webbutveckling" (dt207g) at Mittuniversitetet, Sundsvall. 
 
 ## Description
 This frontend application interacts with the backend API (that makes up the first part of this assignment) to display, add and delete work experiences. The website includes a list displaying all stored work experiences, a form to add new work experiences and an about page with information about the webbsite and the MySQL database. 
