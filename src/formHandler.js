@@ -7,20 +7,18 @@ form.addEventListener("submit", handleFormSubmit);
 async function handleFormSubmit(event) {
     event.preventDefault();
 
-        const company_name = document.getElementById("company_name").value.trim();
+        const company = document.getElementById("company").value.trim();
         const job_title = document.getElementById("job_title").value.trim();
-        const location = document.getElementById("location").value.trim();
         const start_date = document.getElementById("start_date").value;
-        const  end_date = document.getElementById("end_date").value || null;
-        const description = document.getElementById("description").value.trim();
+        const end_date = document.getElementById("end_date").value || null;
 
     // Validation
-    if (!company_name || !job_title || !location || !start_date || !description ) {
+    if (!company || !job_title || !start_date ) {
         showFeedback("Please fill out all fields (end date is optional).", "error");
         return;
     }
 
-    const workExperience = { company_name, job_title, location, start_date, end_date, description};
+    const workExperience = { company, job_title, start_date, end_date};
 
     try {
         const response = await submitWorkExperience(workExperience);
@@ -40,7 +38,7 @@ async function handleFormSubmit(event) {
 
 /* Send POST request to backend API to store new work experience */
 async function submitWorkExperience(workExperience) {
-    const url = "http://localhost:3000/work_experience";
+    const url = "https://moment3dt207g-6kaa.onrender.com/work_experience";
 
     return fetch(url, {
         method: "POST",
