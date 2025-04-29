@@ -1,4 +1,4 @@
-# Moment 3 DT207G Part 3
+# Moment 3 DT207G Part 2
 
 This project makes up the second part of my contribution for moment 3 in the course "Backend-baserad webbutveckling" (dt207g) at Mittuniversitetet, Sundsvall. 
 
@@ -25,7 +25,7 @@ Link to the API's GitHub repository: [Work Experience API](https://github.com/gu
 ## How It Works
 * The page sends a GET request to the backend to retrieve all work experiences. 
 * The user can add a new work experience using the form, which sends a POST request with the form data. 
-* Deleting a work experience triggers a GET request to delete the entry in the backend. 
+* Deleting a work experience triggers a DELETE request to delete the entry in the backend. 
 
 ## Future Improvments 
 * Implement functionality for the user to update a work experience (functionality available in the API). 
